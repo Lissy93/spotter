@@ -78,6 +78,8 @@ class RegisterUserViewController : UIViewController {
     
     func requestWasSuccesful(){
         showDialog("Success", message: "User was registered succesfully")
+        txtFullname.text = ""
+        txtUsername.text = ""
     
     }
     

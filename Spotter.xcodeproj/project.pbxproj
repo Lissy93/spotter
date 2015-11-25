@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C057E3961C05A08400CA9347 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C0C1A3E91C0335680049410C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C1A3E81C0335680049410C /* AppDelegate.swift */; };
 		C0C1A3EB1C0335680049410C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C1A3EA1C0335680049410C /* ViewController.swift */; };
 		C0C1A3EE1C0335690049410C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C1A3EC1C0335690049410C /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterUserViewController.swift; path = Controllers/RegisterUserViewController.swift; sourceTree = "<group>"; };
 		C0C1A3E51C0335680049410C /* Spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C1A3E81C0335680049410C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0C1A3EA1C0335680049410C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C057E3941C05A05700CA9347 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		C0C1A3DC1C0335670049410C = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		C0C1A3E71C0335680049410C /* Spotter */ = {
 			isa = PBXGroup;
 			children = (
+				C057E3941C05A05700CA9347 /* Controllers */,
 				C0C1A3E81C0335680049410C /* AppDelegate.swift */,
 				C0C1A3EA1C0335680049410C /* ViewController.swift */,
 				C0C1A3EC1C0335690049410C /* Main.storyboard */,
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C057E3961C05A08400CA9347 /* RegisterUserViewController.swift in Sources */,
 				C0C1A3EB1C0335680049410C /* ViewController.swift in Sources */,
 				C0C1A3F11C0335690049410C /* Spotter.xcdatamodeld in Sources */,
 				C0C1A3E91C0335680049410C /* AppDelegate.swift in Sources */,
@@ -288,6 +300,7 @@
 				C0C1A3FC1C03356A0049410C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

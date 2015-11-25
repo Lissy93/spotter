@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sJp-o2-5gx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Add Observation-->
@@ -17,8 +18,77 @@
         <!--Register User-->
         <scene sceneID="fKP-MJ-7P5">
             <objects>
-                <viewController id="zIW-oD-HBK" sceneMemberID="viewController">
+                <viewController id="zIW-oD-HBK" customClass="RegisterUserViewController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nwG-vV-20j"/>
+                        <viewControllerLayoutGuide type="bottom" id="E3u-Vg-JPz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Unf-8h-Sof">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRJ-i4-mGp">
+                                <rect key="frame" x="20" y="152" width="280" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" hint="" identifier="" label=""/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T11-Fe-giR">
+                                <rect key="frame" x="20" y="116" width="121" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boJ-8D-Rei">
+                                <rect key="frame" x="17" y="217" width="124" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oU-vC-Hok">
+                                <rect key="frame" x="20" y="252" width="280" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Z3-fx-R9c">
+                                <rect key="frame" x="84" y="323" width="153" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.42065555170000002" green="0.66089062050000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.95420863160000002" green="0.9719174357" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="zIW-oD-HBK" eventType="touchUpInside" id="gSY-hp-Ek1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sRJ-i4-mGp" firstAttribute="top" secondItem="T11-Fe-giR" secondAttribute="bottom" constant="15" id="2Ok-9U-but"/>
+                            <constraint firstItem="9oU-vC-Hok" firstAttribute="leading" secondItem="sRJ-i4-mGp" secondAttribute="leading" id="65D-Gl-Tlf"/>
+                            <constraint firstItem="6Z3-fx-R9c" firstAttribute="top" secondItem="9oU-vC-Hok" secondAttribute="bottom" constant="25" id="8zl-Sl-Xxo"/>
+                            <constraint firstItem="9oU-vC-Hok" firstAttribute="top" secondItem="boJ-8D-Rei" secondAttribute="bottom" constant="14" id="A5W-vc-vGy"/>
+                            <constraint firstItem="T11-Fe-giR" firstAttribute="leading" secondItem="sRJ-i4-mGp" secondAttribute="leading" id="D5f-pP-Cey"/>
+                            <constraint firstItem="boJ-8D-Rei" firstAttribute="leading" secondItem="Unf-8h-Sof" secondAttribute="leadingMargin" constant="1" id="ETc-3h-Gup"/>
+                            <constraint firstItem="T11-Fe-giR" firstAttribute="top" secondItem="nwG-vV-20j" secondAttribute="bottom" constant="96" id="FtX-UJ-2CO"/>
+                            <constraint firstItem="boJ-8D-Rei" firstAttribute="top" secondItem="sRJ-i4-mGp" secondAttribute="bottom" constant="35" id="TXR-xv-FNO"/>
+                            <constraint firstItem="9oU-vC-Hok" firstAttribute="trailing" secondItem="sRJ-i4-mGp" secondAttribute="trailing" id="Yr6-9g-Heu"/>
+                            <constraint firstItem="9oU-vC-Hok" firstAttribute="centerX" secondItem="6Z3-fx-R9c" secondAttribute="centerX" id="ZX5-c5-5tc"/>
+                            <constraint firstItem="6Z3-fx-R9c" firstAttribute="leading" secondItem="Unf-8h-Sof" secondAttribute="leadingMargin" constant="68" id="fVs-w0-0S4"/>
+                            <constraint firstItem="sRJ-i4-mGp" firstAttribute="centerX" secondItem="Unf-8h-Sof" secondAttribute="centerX" id="mJt-Fo-bDS"/>
+                            <constraint firstItem="boJ-8D-Rei" firstAttribute="trailing" secondItem="T11-Fe-giR" secondAttribute="trailing" id="s3l-XH-LcO"/>
+                        </constraints>
+                    </view>
                     <tabBarItem key="tabBarItem" title="Register User" id="aQr-JG-r9P"/>
+                    <connections>
+                        <outlet property="txtFullname" destination="sRJ-i4-mGp" id="8tg-mS-p1A"/>
+                        <outlet property="txtUsername" destination="9oU-vC-Hok" id="5k8-ZU-JZX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrZ-iN-pkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

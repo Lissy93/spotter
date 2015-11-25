@@ -29,7 +29,9 @@ class RegisterUserViewController : UIViewController {
     @IBAction func savePressed(sender: UIButton) {
         if txtFullname.text == "" || txtUsername.text == "" {
             showDialog("Error", message: "Please enter a valid name and username")
-            
+        }
+        else{
+            registerUserRequest(txtFullname.text!, username:txtUsername.text!)
         }
         
     }
@@ -42,5 +44,45 @@ class RegisterUserViewController : UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    
+    func registerUserRequest(fullname: String, username: String){
+        let request = NSMutableURLRequest(URL: NSURL(string:
+            "http://sots.brookes.ac.uk/~p0073862/services/obs/register")!)
+        request.HTTPMethod = "POST"
+        let postString = "username="+username+"&name="+fullname
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            data, response, error in
+
+            let httpResponse = response as! NSHTTPURLResponse
+            let statusCode = httpResponse.statusCode
+            
+            
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+
+                if(statusCode == 200){
+                    self.requestWasSuccesful()
+                }
+                else{
+                    let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    self.requestWasFailed(responseString as! String)
+                }
+            
+            }
+
+        }
+        task.resume()
+
+    }
+    
+    func requestWasSuccesful(){
+        showDialog("Success", message: "User was registered succesfully")
+    
+    }
+    
+    func requestWasFailed(message:String){
+        showDialog("Error", message: message)
+    }
 }
 

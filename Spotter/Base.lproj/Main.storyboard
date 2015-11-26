@@ -234,7 +234,7 @@
             </objects>
             <point key="canvasLocation" x="-2275" y="860"/>
         </scene>
-        <!--Search Observations-->
+        <!--View Controller-->
         <scene sceneID="zUg-eZ-hd5">
             <objects>
                 <viewController id="8CM-pv-SDc" sceneMemberID="viewController">
@@ -245,16 +245,29 @@
                     <view key="view" contentMode="scaleToFill" id="92f-Vo-6BL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjK-7h-8ED">
+                                <rect key="frame" x="95" y="77" width="131" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.42065555170000002" green="0.66089062050000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="All Observations">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ike-fU-xex" kind="push" id="xka-eb-6Wn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search Observations" id="Rnb-7t-5qm"/>
+                    <navigationItem key="navigationItem" id="JG2-Oy-sc9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViD-HE-B56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1321" y="860"/>
+            <point key="canvasLocation" x="-865" y="860"/>
         </scene>
-        <!--View Observations-->
+        <!--View Observations View Controller-->
         <scene sceneID="unK-Hl-jSA">
             <objects>
                 <tableViewController id="ike-fU-xex" customClass="ViewObservationsViewController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -265,7 +278,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OXl-Je-WYP">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXl-Je-WYP" id="eon-Md-cL8">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -280,14 +293,14 @@
                             <outlet property="delegate" destination="ike-fU-xex" id="WqR-rL-Nzn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="View Observations" id="MzR-0c-ytJ"/>
+                    <navigationItem key="navigationItem" id="2V2-Pg-vs9"/>
                     <connections>
                         <outlet property="tableView" destination="zdV-rN-4fn" id="66H-1H-Fvs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3e3-L1-xy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-827" y="860"/>
+            <point key="canvasLocation" x="-443" y="860"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FFf-Or-8za">
@@ -302,13 +315,32 @@
                     <connections>
                         <segue destination="zIW-oD-HBK" kind="relationship" relationship="viewControllers" id="MAf-h4-Ti4"/>
                         <segue destination="PiK-s6-eez" kind="relationship" relationship="viewControllers" id="4DR-Sa-Kzi"/>
-                        <segue destination="8CM-pv-SDc" kind="relationship" relationship="viewControllers" id="v5v-EX-0iO"/>
-                        <segue destination="ike-fU-xex" kind="relationship" relationship="viewControllers" id="9qm-Df-vZ7"/>
+                        <segue destination="ehT-wW-L5C" kind="relationship" relationship="viewControllers" id="v5v-EX-0iO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGU-nP-9Po" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1669" y="33"/>
+        </scene>
+        <!--Search Observations-->
+        <scene sceneID="Lhu-zO-Kfh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ehT-wW-L5C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search Observations" id="Rnb-7t-5qm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1yy-nx-G6g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8CM-pv-SDc" kind="relationship" relationship="rootViewController" id="Mbq-rK-eIs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFa-kU-c1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1327" y="860"/>
         </scene>
     </scenes>
 </document>

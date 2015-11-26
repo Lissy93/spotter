@@ -281,6 +281,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="View Observations" id="MzR-0c-ytJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="zdV-rN-4fn" id="66H-1H-Fvs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3e3-L1-xy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

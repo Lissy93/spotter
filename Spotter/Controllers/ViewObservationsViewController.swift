@@ -1,5 +1,4 @@
 
-
 import UIKit
 import CoreData
 import Foundation
@@ -8,13 +7,14 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
     
     // UI Elements
     @IBOutlet weak var tableView: UITableView!
+    
+    // Parser variables
     var parser = NSXMLParser()
     var observations = NSMutableArray()
     var elements = NSMutableDictionary()
     var element = NSString()
     var title1 = NSMutableString()
     var date = NSMutableString()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

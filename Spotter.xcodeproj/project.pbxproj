@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C057A59F1C0EF1C9006F86B8 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057A59E1C0EF1C9006F86B8 /* XMLParser.swift */; settings = {ASSET_TAGS = (); }; };
+		C057A5A11C0F651E006F86B8 /* SearchObservationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057A5A01C0F651E006F86B8 /* SearchObservationsController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E3961C05A08400CA9347 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E3981C05C0EC00CA9347 /* AddObservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E39A1C05F55700CA9347 /* ViewObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		C057A59E1C0EF1C9006F86B8 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParser.swift; path = Utils/XMLParser.swift; sourceTree = "<group>"; };
+		C057A5A01C0F651E006F86B8 /* SearchObservationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchObservationsController.swift; path = Controllers/SearchObservationsController.swift; sourceTree = "<group>"; };
 		C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterUserViewController.swift; path = Controllers/RegisterUserViewController.swift; sourceTree = "<group>"; };
 		C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddObservationViewController.swift; path = Controllers/AddObservationViewController.swift; sourceTree = "<group>"; };
 		C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewObservationsViewController.swift; path = Controllers/ViewObservationsViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */,
 				C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */,
 				C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */,
+				C057A5A01C0F651E006F86B8 /* SearchObservationsController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C057A59F1C0EF1C9006F86B8 /* XMLParser.swift in Sources */,
+				C057A5A11C0F651E006F86B8 /* SearchObservationsController.swift in Sources */,
 				C057E3961C05A08400CA9347 /* RegisterUserViewController.swift in Sources */,
 				C0C1A3EB1C0335680049410C /* ViewController.swift in Sources */,
 				C057E3981C05C0EC00CA9347 /* AddObservationViewController.swift in Sources */,

@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="-2275" y="860"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Observations Controller-->
         <scene sceneID="zUg-eZ-hd5">
             <objects>
-                <viewController id="8CM-pv-SDc" sceneMemberID="viewController">
+                <viewController id="8CM-pv-SDc" customClass="SearchObservationsController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P6a-r1-JQi"/>
                         <viewControllerLayoutGuide type="bottom" id="HgC-mN-TLq"/>

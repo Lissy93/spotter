@@ -27,7 +27,9 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     }
     
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String,
+        namespaceURI: String?, qualifiedName qName: String?,
+        attributes attributeDict: [String : String]) {
         if (rootElement == nil) {
             rootElement = XMLElement()
             currentElement = rootElement
@@ -50,7 +52,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(parser: NSXMLParser, didEndElement elementName: String,
+        namespaceURI: String?, qualifiedName qName: String?) {
         currentElement = currentElement?.parent
     }
     

@@ -49,6 +49,16 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
     }
     
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let pressedObservation: Observation = (observations[indexPath.row] as! Observation)
+        let alert = UIAlertController(title: pressedObservation.name, message: pressedObservation.description, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    
+    }
+    
+    
     func getObservationsRequest(){
         let request = NSMutableURLRequest(URL: NSURL(string:
             "http://sots.brookes.ac.uk/~p0073862/services/obs/observations")!)

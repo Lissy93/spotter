@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C057A59F1C0EF1C9006F86B8 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057A59E1C0EF1C9006F86B8 /* XMLParser.swift */; settings = {ASSET_TAGS = (); }; };
 		C057A5A11C0F651E006F86B8 /* SearchObservationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057A5A01C0F651E006F86B8 /* SearchObservationsController.swift */; settings = {ASSET_TAGS = (); }; };
+		C057A5A31C109298006F86B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C057A5A21C109298006F86B8 /* MapKit.framework */; };
+		C057A5A51C1093DB006F86B8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057A5A41C1093DB006F86B8 /* LocationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E3961C05A08400CA9347 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E3981C05C0EC00CA9347 /* AddObservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E39A1C05F55700CA9347 /* ViewObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		C057A59E1C0EF1C9006F86B8 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParser.swift; path = Utils/XMLParser.swift; sourceTree = "<group>"; };
 		C057A5A01C0F651E006F86B8 /* SearchObservationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchObservationsController.swift; path = Controllers/SearchObservationsController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		C057A5A21C109298006F86B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C057A5A41C1093DB006F86B8 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = Controllers/LocationViewController.swift; sourceTree = "<group>"; };
 		C057E3951C05A08400CA9347 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterUserViewController.swift; path = Controllers/RegisterUserViewController.swift; sourceTree = "<group>"; };
 		C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddObservationViewController.swift; path = Controllers/AddObservationViewController.swift; sourceTree = "<group>"; };
 		C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewObservationsViewController.swift; path = Controllers/ViewObservationsViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C057A5A31C109298006F86B8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,7 @@
 				C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */,
 				C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */,
 				C057A5A01C0F651E006F86B8 /* SearchObservationsController.swift */,
+				C057A5A41C1093DB006F86B8 /* LocationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -79,6 +85,7 @@
 		C0C1A3DC1C0335670049410C = {
 			isa = PBXGroup;
 			children = (
+				C057A5A21C109298006F86B8 /* MapKit.framework */,
 				C0C1A3E71C0335680049410C /* Spotter */,
 				C0C1A3E61C0335680049410C /* Products */,
 			);
@@ -185,6 +192,7 @@
 				C057E3961C05A08400CA9347 /* RegisterUserViewController.swift in Sources */,
 				C0C1A3EB1C0335680049410C /* ViewController.swift in Sources */,
 				C057E3981C05C0EC00CA9347 /* AddObservationViewController.swift in Sources */,
+				C057A5A51C1093DB006F86B8 /* LocationViewController.swift in Sources */,
 				C057E39D1C073A2800CA9347 /* Observation.swift in Sources */,
 				C0C1A3F11C0335690049410C /* Spotter.xcdatamodeld in Sources */,
 				C057E39A1C05F55700CA9347 /* ViewObservationsViewController.swift in Sources */,

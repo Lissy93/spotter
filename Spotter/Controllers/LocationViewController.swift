@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class LocationViewController: UIViewController{
+
+    var observationsList = NSMutableArray()
+
+}

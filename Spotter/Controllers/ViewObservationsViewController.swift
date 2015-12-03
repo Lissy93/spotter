@@ -138,6 +138,12 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC:LocationViewController = segue.destinationViewController as! LocationViewController
+            destinationVC.observationsList = observations
+    }
+
+    
 }
 
 

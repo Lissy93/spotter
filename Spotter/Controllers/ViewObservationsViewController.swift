@@ -18,14 +18,14 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
     
     let baseUrl = "http://sots.brookes.ac.uk/~p0073862/services/obs"
     var urlExt = ""
-    
+    var viewTitle = "Observations"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getObservationsRequest()
         tableView.delegate = self
         tableView.dataSource = self;
-        title = "All Observations"
+        title = viewTitle
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }

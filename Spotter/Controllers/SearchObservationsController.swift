@@ -14,15 +14,19 @@ class SearchObservationsController : UIViewController{
         
         if (segue.identifier! == "userObs") {
             destinationVC.urlExt = "/observations/user/"+txtObsUsername.text!
+            destinationVC.viewTitle = "Observations by User"
         }
         else if (segue.identifier! == "dateTimeObs") {
             destinationVC.urlExt = "/observations/datetime/"+txtObsDateTime.text!
+            destinationVC.viewTitle = "Observations by Date"
         }
         else if (segue.identifier! == "categoryObs") {
             destinationVC.urlExt = "/observations/category/"+txtObsCategory.text!
+            destinationVC.viewTitle = "Observations by Category"
         }
         else{
             destinationVC.urlExt = "/observations"
+            destinationVC.viewTitle = "All Observations"
         }
         
     }

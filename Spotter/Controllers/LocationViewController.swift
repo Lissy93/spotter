@@ -8,9 +8,29 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class LocationViewController: UIViewController{
 
+    
+    @IBOutlet var mapView: MKMapView!
+    
     var observationsList = NSMutableArray()
+    
+    override func viewDidLoad() {
+        
+        for eachObservation in observationsList{
+            let observation = eachObservation as! Observation
+            let location = CLLocationCoordinate2D(latitude: Double(observation.latitude)!, longitude: Double(observation.longitude)!)
+            var anotation = MKPointAnnotation()
+            anotation.coordinate = location
+            anotation.title = "The Location"
+            anotation.subtitle = "This is the location !!!"
+            mapView.addAnnotation(anotation)
+            
+        }
+    
+    }
+
 
 }

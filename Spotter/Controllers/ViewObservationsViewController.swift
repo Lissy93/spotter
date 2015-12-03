@@ -16,6 +16,10 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
     var title1 = NSMutableString()
     var date = NSMutableString()
     
+    let baseUrl = "http://sots.brookes.ac.uk/~p0073862/services/obs"
+    var urlExt = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getObservationsRequest()
@@ -62,8 +66,7 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
     
     
     func getObservationsRequest(){
-        let request = NSMutableURLRequest(URL: NSURL(string:
-            "http://sots.brookes.ac.uk/~p0073862/services/obs/observations")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: baseUrl+urlExt)!)
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in

@@ -254,7 +254,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ike-fU-xex" kind="push" id="xka-eb-6Wn"/>
+                                    <segue destination="ike-fU-xex" kind="push" identifier="allObs" id="xka-eb-6Wn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNR-M6-eC5">
@@ -264,6 +264,9 @@
                                 <state key="normal" title="Observations by User">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ike-fU-xex" kind="push" identifier="userObs" id="eIr-1R-EZW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fon-KN-AIk">
                                 <rect key="frame" x="20" y="268" width="280" height="30"/>
@@ -272,6 +275,9 @@
                                 <state key="normal" title="Observations by Date/ Time">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ike-fU-xex" kind="push" identifier="dateTimeObs" id="CbI-QE-CmW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67V-rY-OuN">
                                 <rect key="frame" x="20" y="375" width="280" height="30"/>
@@ -280,6 +286,9 @@
                                 <state key="normal" title="Observations by Category">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ike-fU-xex" kind="push" identifier="categoryObs" id="wiw-ir-NHx"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uNw-Ao-CQd">
                                 <rect key="frame" x="20" y="116" width="280" height="30"/>
@@ -363,6 +372,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JG2-Oy-sc9"/>
+                    <connections>
+                        <outlet property="txtObsCategory" destination="BST-dD-6Ry" id="aL3-AJ-MC8"/>
+                        <outlet property="txtObsDateTime" destination="DNc-Kx-BfO" id="wrw-3S-toW"/>
+                        <outlet property="txtObsUsername" destination="uNw-Ao-CQd" id="sJf-m0-51v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViD-HE-B56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -444,4 +458,7 @@
             <point key="canvasLocation" x="-1327" y="860"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eIr-1R-EZW"/>
+    </inferredMetricsTieBreakers>
 </document>

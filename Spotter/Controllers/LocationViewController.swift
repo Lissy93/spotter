@@ -27,9 +27,8 @@ class LocationViewController: UIViewController{
             anotation.title = "The Location"
             anotation.subtitle = "This is the location !!!"
             mapView.addAnnotation(anotation)
-            
         }
-    
+        
     }
 
 

@@ -89,21 +89,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-Bq-ka3">
+                                <rect key="frame" x="65" y="448" width="191" height="34"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.42065555170000002" green="0.66089062050000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="OwJ-H7-UYV"/>
+                                </constraints>
+                                <state key="normal" title="Upload Now">
+                                    <color key="titleColor" red="0.95420863160000002" green="0.9719174357" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="PiK-s6-eez" eventType="touchUpInside" id="pQi-Dv-PWb"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-g2-Zuu">
                                 <rect key="frame" x="20" y="159" width="280" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-Bq-ka3">
-                                <rect key="frame" x="65" y="448" width="191" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELd-zS-fon">
+                                <rect key="frame" x="65" y="490" width="191" height="34"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.42065555170000002" green="0.66089062050000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Save Observation">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="KwN-1U-d0D"/>
+                                </constraints>
+                                <state key="normal" title="Upload Later">
                                     <color key="titleColor" red="0.95420863160000002" green="0.9719174357" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="savePressed:" destination="PiK-s6-eez" eventType="touchUpInside" id="pQi-Dv-PWb"/>
+                                    <action selector="uploadLaterPressed:" destination="PiK-s6-eez" eventType="touchUpInside" id="xCd-3k-Gl9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,6 +135,7 @@
                             <constraint firstItem="LYq-ZE-7vn" firstAttribute="top" secondItem="Tyj-Da-ild" secondAttribute="bottom" constant="28" id="9m9-eb-6js"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="top" secondItem="mXm-n7-uHC" secondAttribute="top" constant="72" id="EOc-2N-FRb"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="leading" secondItem="QPU-SO-I7f" secondAttribute="leading" id="IOn-6o-jKx"/>
+                            <constraint firstItem="ELd-zS-fon" firstAttribute="leading" secondItem="0lm-Bq-ka3" secondAttribute="leading" id="M5m-9D-Wre"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="leading" secondItem="Ib8-g2-Zuu" secondAttribute="leading" id="OK3-jh-aZz"/>
                             <constraint firstItem="fNb-bq-fzr" firstAttribute="baseline" secondItem="snC-EV-GhE" secondAttribute="baseline" id="P7c-Hm-ouA"/>
                             <constraint firstItem="T5J-RG-bdo" firstAttribute="leading" secondItem="snC-EV-GhE" secondAttribute="leading" id="PXC-qy-xY0"/>
@@ -125,11 +143,13 @@
                             <constraint firstItem="T5J-RG-bdo" firstAttribute="leading" secondItem="QPU-SO-I7f" secondAttribute="trailing" constant="34" id="WgR-Po-1ai"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="leading" secondItem="LYq-ZE-7vn" secondAttribute="leading" id="Xt5-Vo-b4q"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="leading" secondItem="vX2-9v-irS" secondAttribute="leading" id="YQh-ro-RBf"/>
+                            <constraint firstItem="0lm-Bq-ka3" firstAttribute="trailing" secondItem="ELd-zS-fon" secondAttribute="trailing" id="YaU-kC-dZm"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="leading" secondItem="mXm-n7-uHC" secondAttribute="leadingMargin" constant="4" id="ZIq-Oz-lR6"/>
                             <constraint firstItem="0lm-Bq-ka3" firstAttribute="leading" secondItem="mXm-n7-uHC" secondAttribute="leadingMargin" constant="45" id="b0l-UD-CIa"/>
                             <constraint firstItem="YyL-WM-LFW" firstAttribute="leading" secondItem="UfQ-Dh-xwE" secondAttribute="leading" id="bZs-aM-qjq"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="trailing" secondItem="Ib8-g2-Zuu" secondAttribute="trailing" id="gdN-zR-9eZ"/>
                             <constraint firstItem="snC-EV-GhE" firstAttribute="leading" secondItem="fNb-bq-fzr" secondAttribute="trailing" constant="94" id="iqb-oC-A5i"/>
+                            <constraint firstItem="ELd-zS-fon" firstAttribute="top" secondItem="0lm-Bq-ka3" secondAttribute="bottom" constant="8" symbolic="YES" id="kmz-Sh-5H9"/>
                             <constraint firstItem="UfQ-Dh-xwE" firstAttribute="top" secondItem="QPU-SO-I7f" secondAttribute="bottom" constant="22" id="ktu-G0-Yxa"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="leading" secondItem="fNb-bq-fzr" secondAttribute="leading" id="lT6-w2-giv"/>
                             <constraint firstItem="Tyj-Da-ild" firstAttribute="trailing" secondItem="T5J-RG-bdo" secondAttribute="trailing" id="lfs-Yz-8bn"/>
@@ -517,6 +537,7 @@
                             <constraint firstAttribute="trailing" secondItem="h9j-sg-Hnt" secondAttribute="trailing" id="y3c-Ye-jVG"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="h9j-sg-Hnt" id="qmf-hw-Rx2"/>
                     </connections>

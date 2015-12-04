@@ -44,7 +44,7 @@ class AddObservationViewController : UIViewController{
                 txtUsername.text!,
                 name: txtObservationName.text!,
                 description: txtDescription.text!,
-                date: "2014-10-05 15:30:00",
+                date: NSDate().description,
                 latitude: txtLatitude.text!,
                 longitude: txtLongitude.text!,
                 category: txtCategory.text!
@@ -52,6 +52,32 @@ class AddObservationViewController : UIViewController{
         }
     }
     
+    
+    
+    @IBAction func uploadLaterPressed(sender: UIButton) {
+        if txtUsername.text == "" ||
+            txtObservationName.text == "" ||
+            txtDescription.text == "" ||
+            txtLatitude.text == "" ||
+            txtLongitude.text == "" ||
+            txtCategory.text == ""{
+                showDialog("Error", message: "Text fields can not be empty")
+        }
+        else{
+            saveObservationInCoreData(
+                txtUsername.text!,
+                name: txtObservationName.text!,
+                description: txtDescription.text!,
+                date: NSDate().description,
+                latitude: txtLatitude.text!,
+                longitude: txtLongitude.text!,
+                category: txtCategory.text!
+            )
+        }
+        
+        
+        
+    }
 
     
     
@@ -97,6 +123,21 @@ class AddObservationViewController : UIViewController{
         task.resume()
         
     }
+    
+    
+    func saveObservationInCoreData(
+        username: String, name: String, description: String, date: String,
+        latitude: String, longitude: String, category: String){
+    
+            //todo add to coredata
+            
+            requestWasSuccesful()
+    
+    
+    }
+    
+    
+    
     
     func requestWasSuccesful(){
         showDialog("Success", message: "Observation Saved!") // Show success dialog

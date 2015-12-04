@@ -442,6 +442,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="txtObsCategory" destination="BST-dD-6Ry" id="aL3-AJ-MC8"/>
+                        <outlet property="txtObsDateTime" destination="ZtV-Te-eXx" id="SvW-Vi-Y0g"/>
                         <outlet property="txtObsUsername" destination="uNw-Ao-CQd" id="sJf-m0-51v"/>
                     </connections>
                 </viewController>

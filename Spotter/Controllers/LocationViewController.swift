@@ -22,7 +22,7 @@ class LocationViewController: UIViewController{
         for eachObservation in observationsList{
             let observation = eachObservation as! Observation
             let location = CLLocationCoordinate2D(latitude: Double(observation.latitude)!, longitude: Double(observation.longitude)!)
-            var anotation = MKPointAnnotation()
+            let anotation = MKPointAnnotation()
             anotation.coordinate = location
             anotation.title = "The Location"
             anotation.subtitle = "This is the location !!!"

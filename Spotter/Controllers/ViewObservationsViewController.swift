@@ -133,6 +133,9 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
                 
                 dispatch_async(dispatch_get_main_queue()) { () -> Void in
                     self.tableView.reloadData()
+                    if(self.observations.count == 0 ){
+                        self.showDialog("Note", message: "There were no observations to display for this filter")
+                    }
                 }
             }
         }
@@ -146,6 +149,14 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
             destinationVC.observationsList = observations
     }
 
+    
+    func showDialog(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message,
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss",
+            style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
 }
 

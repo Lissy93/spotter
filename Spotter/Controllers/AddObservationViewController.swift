@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 import UIKit
 
 class AddObservationViewController : UIViewController{
@@ -129,9 +130,33 @@ class AddObservationViewController : UIViewController{
         username: String, name: String, description: String, date: String,
         latitude: String, longitude: String, category: String){
     
-            //todo add to coredata
+            let appDelegate =
+            UIApplication.sharedApplication().delegate as! AppDelegate
             
-            requestWasSuccesful()
+            let managedContext = appDelegate.managedObjectContext
+            
+            let entity =  NSEntityDescription.entityForName("ObservationsData",
+                inManagedObjectContext:managedContext)
+            
+            let observationData = NSManagedObject(entity: entity!,
+                insertIntoManagedObjectContext: managedContext)
+            
+            observationData.setValue(username, forKey: "username")
+            observationData.setValue(name, forKey: "name")
+            observationData.setValue(description, forKey: "desc")
+            observationData.setValue(date, forKey: "date")
+            observationData.setValue(latitude, forKey: "latitude")
+            observationData.setValue(longitude, forKey: "longitude")
+            observationData.setValue(category, forKey: "category")
+            
+            do {
+                try managedContext.save()
+                requestWasSuccesful()
+            } catch let error as NSError  {
+                requestWasFailed("Error Saving Observation: "+error.description)
+            }
+            
+            
     
     
     }

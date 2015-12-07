@@ -83,9 +83,17 @@ class PendingObservationsViewController : UIViewController, UITableViewDataSourc
         let alert = UIAlertController(title: "Observation: "+obs.name,
             message: "Description: "+obs.description+"\n Recorded By: "+obs.username+" \n Date: "+obs.date + "\n Location: "+obs.latitude+","+obs.longitude+" \n Category: "+obs.category,
             preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Upload", style: UIAlertActionStyle.Default, handler: {[weak self]
+            (paramAction:UIAlertAction!) in self!.uploadObs(obs) } ))
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    
+    func uploadObs(observation: Observation){
+        
+    }
+    
     
     @IBAction func uploadObservationsPressed(sender: UIButton) {
         

@@ -148,6 +148,8 @@ class AddObservationViewController : UIViewController{
             observationData.setValue(latitude, forKey: "latitude")
             observationData.setValue(longitude, forKey: "longitude")
             observationData.setValue(category, forKey: "category")
+
+            
             
             do {
                 try managedContext.save()

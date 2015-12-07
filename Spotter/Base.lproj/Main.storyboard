@@ -560,11 +560,56 @@
                         <segue destination="zIW-oD-HBK" kind="relationship" relationship="viewControllers" id="MAf-h4-Ti4"/>
                         <segue destination="PiK-s6-eez" kind="relationship" relationship="viewControllers" id="4DR-Sa-Kzi"/>
                         <segue destination="ehT-wW-L5C" kind="relationship" relationship="viewControllers" id="v5v-EX-0iO"/>
+                        <segue destination="tt8-of-ICi" kind="relationship" relationship="viewControllers" id="kux-Gr-9zF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGU-nP-9Po" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1669" y="33"/>
+        </scene>
+        <!--Pending Observations-->
+        <scene sceneID="70l-mv-8fm">
+            <objects>
+                <viewController id="tt8-of-ICi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cT0-jq-eoy"/>
+                        <viewControllerLayoutGuide type="bottom" id="lkj-Xh-luQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4ZW-1x-seO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jmd-7h-E1d">
+                                <rect key="frame" x="0.0" y="35" width="320" height="397"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIC-Wo-pLn">
+                                <rect key="frame" x="61" y="460" width="198" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.42065555170000002" green="0.66089062050000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Upload Observations">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lIC-Wo-pLn" firstAttribute="top" secondItem="Jmd-7h-E1d" secondAttribute="bottom" constant="28" id="9RI-27-4jr"/>
+                            <constraint firstItem="lkj-Xh-luQ" firstAttribute="top" secondItem="lIC-Wo-pLn" secondAttribute="bottom" constant="29" id="Fac-ch-bOq"/>
+                            <constraint firstItem="lIC-Wo-pLn" firstAttribute="centerX" secondItem="Jmd-7h-E1d" secondAttribute="centerX" id="KWA-KJ-6Ca"/>
+                            <constraint firstAttribute="trailing" secondItem="Jmd-7h-E1d" secondAttribute="trailing" id="O3h-HV-Kcm"/>
+                            <constraint firstItem="lIC-Wo-pLn" firstAttribute="leading" secondItem="4ZW-1x-seO" secondAttribute="leadingMargin" constant="45" id="iBT-JS-Fjf"/>
+                            <constraint firstItem="Jmd-7h-E1d" firstAttribute="leading" secondItem="4ZW-1x-seO" secondAttribute="leading" id="q3J-oi-1gd"/>
+                            <constraint firstItem="Jmd-7h-E1d" firstAttribute="top" secondItem="cT0-jq-eoy" secondAttribute="bottom" constant="15" id="xbu-Tb-kpN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pending Observations" id="Prl-EF-3vJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsd-x4-6SD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-865" y="33"/>
         </scene>
         <!--Search Observations-->
         <scene sceneID="Lhu-zO-Kfh">

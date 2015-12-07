@@ -60,8 +60,6 @@ class ViewObservationsViewController:  UIViewController, UITableViewDataSource, 
             preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
-    
-    
     }
     
     

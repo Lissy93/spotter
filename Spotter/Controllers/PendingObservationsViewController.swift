@@ -69,6 +69,24 @@ class PendingObservationsViewController : UIViewController, UITableViewDataSourc
     }
 
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let pressedObservation = (observations[indexPath.row])
+        let obs = Observation(
+            username: pressedObservation.valueForKey("username") as! String,
+            name: pressedObservation.valueForKey("name") as! String,
+            description: pressedObservation.valueForKey("desc") as! String,
+            date: pressedObservation.valueForKey("date") as! String,
+            latitude: pressedObservation.valueForKey("latitude") as! String,
+            longitude: pressedObservation.valueForKey("longitude") as! String,
+            category: pressedObservation.valueForKey("category") as! String
+        )
+        let alert = UIAlertController(title: "Observation: "+obs.name,
+            message: "Description: "+obs.description+"\n Recorded By: "+obs.username+" \n Date: "+obs.date + "\n Location: "+obs.latitude+","+obs.longitude+" \n Category: "+obs.category,
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func uploadObservationsPressed(sender: UIButton) {
         
         

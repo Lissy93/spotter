@@ -570,7 +570,7 @@
         <!--Pending Observations-->
         <scene sceneID="70l-mv-8fm">
             <objects>
-                <viewController id="tt8-of-ICi" sceneMemberID="viewController">
+                <viewController id="tt8-of-ICi" customClass="PendingObservationsViewController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cT0-jq-eoy"/>
                         <viewControllerLayoutGuide type="bottom" id="lkj-Xh-luQ"/>
@@ -591,6 +591,9 @@
                                 <state key="normal" title="Upload Observations">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="uploadObservationsPressed:" destination="tt8-of-ICi" eventType="touchUpInside" id="ILN-Kg-c52"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -606,6 +609,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pending Observations" id="Prl-EF-3vJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="Jmd-7h-E1d" id="Gee-Rz-RFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsd-x4-6SD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

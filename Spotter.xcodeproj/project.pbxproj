@@ -15,6 +15,7 @@
 		C057E3981C05C0EC00CA9347 /* AddObservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E39A1C05F55700CA9347 /* ViewObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C057E39D1C073A2800CA9347 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E39C1C073A2800CA9347 /* Observation.swift */; settings = {ASSET_TAGS = (); }; };
+		C069FE001C15886A0019D830 /* PendingObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069FDFF1C15886A0019D830 /* PendingObservationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C0C1A3E91C0335680049410C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C1A3E81C0335680049410C /* AppDelegate.swift */; };
 		C0C1A3EB1C0335680049410C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C1A3EA1C0335680049410C /* ViewController.swift */; };
 		C0C1A3EE1C0335690049410C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C1A3EC1C0335690049410C /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		C057E3971C05C0EC00CA9347 /* AddObservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddObservationViewController.swift; path = Controllers/AddObservationViewController.swift; sourceTree = "<group>"; };
 		C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewObservationsViewController.swift; path = Controllers/ViewObservationsViewController.swift; sourceTree = "<group>"; };
 		C057E39C1C073A2800CA9347 /* Observation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observation.swift; path = Models/Observation.swift; sourceTree = "<group>"; };
+		C069FDFF1C15886A0019D830 /* PendingObservationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PendingObservationsViewController.swift; path = Controllers/PendingObservationsViewController.swift; sourceTree = "<group>"; };
 		C0C1A3E51C0335680049410C /* Spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C1A3E81C0335680049410C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0C1A3EA1C0335680049410C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				C057E3991C05F55700CA9347 /* ViewObservationsViewController.swift */,
 				C057A5A01C0F651E006F86B8 /* SearchObservationsController.swift */,
 				C057A5A41C1093DB006F86B8 /* LocationViewController.swift */,
+				C069FDFF1C15886A0019D830 /* PendingObservationsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				C057E3981C05C0EC00CA9347 /* AddObservationViewController.swift in Sources */,
 				C057A5A51C1093DB006F86B8 /* LocationViewController.swift in Sources */,
 				C057E39D1C073A2800CA9347 /* Observation.swift in Sources */,
+				C069FE001C15886A0019D830 /* PendingObservationsViewController.swift in Sources */,
 				C0C1A3F11C0335690049410C /* Spotter.xcdatamodeld in Sources */,
 				C057E39A1C05F55700CA9347 /* ViewObservationsViewController.swift in Sources */,
 				C0C1A3E91C0335680049410C /* AppDelegate.swift in Sources */,

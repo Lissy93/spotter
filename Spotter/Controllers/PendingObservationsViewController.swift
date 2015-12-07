@@ -3,16 +3,19 @@ import Foundation
 import CoreData
 import UIKit
 
-class PendingObservationsViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
+class PendingObservationsViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, ObservationRequest{
 
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var manageObservations: ManageObservations = ManageObservations(this: UIViewController())
     
     var observations = [NSManagedObject]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        manageObservations = ManageObservations(this: self as UIViewController)
         title = "Pending Observations"
         tableView.delegate = self
         tableView.dataSource = self;
@@ -26,21 +29,7 @@ class PendingObservationsViewController : UIViewController, UITableViewDataSourc
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let appDelegate =
-        UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        let fetchRequest = NSFetchRequest(entityName: "ObservationsData")
-        
-        do {
-            let results =
-            try managedContext.executeFetchRequest(fetchRequest)
-            observations = results as! [NSManagedObject]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
+        fetchObservationsFromCoreData()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -85,19 +74,54 @@ class PendingObservationsViewController : UIViewController, UITableViewDataSourc
             preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
         alert.addAction(UIAlertAction(title: "Upload", style: UIAlertActionStyle.Default, handler: {[weak self]
-            (paramAction:UIAlertAction!) in self!.uploadObs(obs) } ))
+            (paramAction:UIAlertAction!) in self!.uploadObs(obs)
+            self!.removeObsFromCoreData(indexPath)
+            } ))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
-    func uploadObs(observation: Observation){
+    func fetchObservationsFromCoreData(){
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
         
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "ObservationsData")
+        
+        do {
+            let results =
+            try managedContext.executeFetchRequest(fetchRequest)
+            observations = results as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
     }
     
+    func uploadObs(observation: Observation){
+        manageObservations.addObservationRequest(
+            observation.username,
+            name: observation.name,
+            description: observation.description,
+            date: NSDate().description,
+            latitude: observation.latitude,
+            longitude: observation.longitude,
+            category: observation.category
+        )
+    }
     
-    @IBAction func uploadObservationsPressed(sender: UIButton) {
-        
-        
+    func removeObsFromCoreData(indexPath: NSIndexPath){
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDel.managedObjectContext
+        context.deleteObject(observations[indexPath.row] as NSManagedObject)
+        observations.removeAtIndex(indexPath.row)
+        do{ try context.save() }
+        catch let error as NSError { print("Error \(error)") }
+    }
+
+    func success() {
+        fetchObservationsFromCoreData()
+        tableView.reloadData()
     }
     
 

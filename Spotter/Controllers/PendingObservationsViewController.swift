@@ -1,16 +1,9 @@
-//
-//  PendingObservationsViewController.swift
-//  Spotter
-//
-//  Created by Alicia Sykes on 07/12/2015.
-//  Copyright © 2015 Alicia Sykes. All rights reserved.
-//
 
 import Foundation
 import CoreData
 import UIKit
 
-class PendingObservationsViewController : UIViewController, UITableViewDataSource{
+class PendingObservationsViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
 
 
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +14,8 @@ class PendingObservationsViewController : UIViewController, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Pending Observations"
+        tableView.delegate = self
+        tableView.dataSource = self;
         tableView.registerClass(UITableViewCell.self,
             forCellReuseIdentifier: "Cell")
     }
@@ -29,9 +24,27 @@ class PendingObservationsViewController : UIViewController, UITableViewDataSourc
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func uploadObservationsPressed(sender: UIButton) {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
         
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "ObservationsData")
+        
+        do {
+            let results =
+            try managedContext.executeFetchRequest(fetchRequest)
+            observations = results as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.tableView.reloadData()
     }
     
     
@@ -47,13 +60,19 @@ class PendingObservationsViewController : UIViewController, UITableViewDataSourc
             let cell =
             tableView.dequeueReusableCellWithIdentifier("Cell")
             
-            let person = observations[indexPath.row]
-            
+            let observation = observations[indexPath.row]
+                        
             cell!.textLabel!.text =
-                person.valueForKey("name") as? String
+                observation.valueForKey("name") as? String
             
             return cell!
     }
 
+    
+    @IBAction func uploadObservationsPressed(sender: UIButton) {
+        
+        
+    }
+    
 
 }

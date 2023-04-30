@@ -1,7 +1,7 @@
 <h1 align="center">Spotter</h1>
 <p align="center">
   <i>An iOS / Swift app for recording observations geographically</i><br><br>
-  <img width="90" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/319/flag-in-hole_26f3.png" />
+  <img width="90" src="https://i.ibb.co/9p5zxC5/flag-in-hole-26f3.png" />
 </p>
 
 ## About
